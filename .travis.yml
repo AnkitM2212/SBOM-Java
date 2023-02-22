@@ -27,7 +27,7 @@ addons:
  sbom:
   on:
    branch: main
-   run_phase: before_script
-   output_format: cyclonedx-xml
+  run_phase: after_failure
+  output_format: cyclonedx-xml
 after_success:
   - bash <(curl -s https://codecov.io/bash)
